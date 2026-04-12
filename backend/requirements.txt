@@ -1,1 +1,21 @@
 Flask==2.3.2
+
+
+
+cd frontend
+docker build -t flask-frontend -f  Dockerfile.frontend.
+cd ../backend
+docker build -t flask-frontend -f Dockerfile.frontend .
+docker build -t express-backend -f Dockerfile.backend .
+
+
+#eval $(minikube docker-env)
+#docker images
+#Kubectl apply -f kss/
+#kubectl delete pods --all
+#Kubectl get pods
+#minikube service flask-backend-service
+
+#kubectl port-forward service/flask-backend-service 5000:5000
+
+#http://localhost:5000/
